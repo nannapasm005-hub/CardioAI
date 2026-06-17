@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.env
+heart.csv
+.pytest_cache/
+.DS_Store
+
+# หมายเหตุ: model.pkl / model_quiz.pkl ตั้งใจ "ไม่" ignore แล้ว — commit เข้า repo
+# เพื่อให้ deploy มีโมเดลพร้อมใช้ (host ไม่มี heart.csv ไป train เอง)
+# ⚠️ ต้อง train จาก heart.csv จริงก่อน แล้วค่อย commit — อย่า commit โมเดลจาก synthetic/ข้อมูลปลอม

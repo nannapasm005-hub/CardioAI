@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    # คีย์ส่งผ่าน environment ตอน run ไม่ baked เข้า image
+    # ค่ามาจากไฟล์ .env ในโฟลเดอร์เดียวกัน (ดู .env.example)
+    env_file:
+      - .env
+    environment:
+      - TYPHOON_API_KEY=${TYPHOON_API_KEY:?ต้องตั้งค่า TYPHOON_API_KEY ใน .env}
+      - TYPHOON_MODEL=${TYPHOON_MODEL:-typhoon-v2.5-30b-a3b-instruct}
+      - ALLOWED_ORIGINS=${ALLOWED_ORIGINS:-*}

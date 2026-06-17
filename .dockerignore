@@ -1,0 +1,11 @@
+# อย่าให้ secret หรือไฟล์ขยะหลุดเข้า image
+.env
+.git
+.gitignore
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.DS_Store
+README.md
